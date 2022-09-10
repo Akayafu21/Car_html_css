@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75); /* forbackparagraphs */
+    --Very-ligh-gray: hsl(0, 0%, 95%);/* for background, headings, buttons */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+    /* outline: 1px solid blue; */ 
+    /* ^^^^^^^^^^^^^ */
+    /* for debug */
+}
+
+body {
+    position: relative;
+    background-color: var(--Very-ligh-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card{
+    position: absolute;
+    max-width: 950px;
+    display: flex;
+    margin: 0 auto;
+    height: 525px;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+
+
+/* assign boxes color */
+.left {
+    background-color: var(--Bright-orange);
+}
+.mid{
+    background-color: var(--Dark-cyan);
+}
+.right{
+    background-color: var(--Very-dark-cyan);
+}
+/* assign buttons color */
+
+.left> button{
+    border-color: var(--Bright-orange);
+    color: var(--Bright-orange);
+}
+
+.mid > button{
+    border-color: var(--Dark-cyan);
+    color: var(--Dark-cyan);
+}
+
+.right>button{
+    border-color: var(--Very-dark-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+/* universal set */
+.left,.mid,.right {
+    padding: 3rem;
+}
+
+
+div img {
+    margin-bottom: 2.5rem;
+}
+
+h1 {
+    text-transform: uppercase;
+    color:var(--Very-ligh-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+p {
+    line-height: 2rem;
+    color: var(--Transparent-white);
+    margin-bottom: 4rem;
+}
+
+div button {
+    border: 3px solid;
+    transition: .4s;
+    background-color: var(--Very-ligh-gray);
+    width: 160px;
+    height: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Hover */
+
+.left> button:hover{
+    background-color: var(--Bright-orange);
+    border-color: var(--Very-ligh-gray);
+    color: var(--Very-ligh-gray);
+}
+
+.mid > button:hover{
+    background-color: var(--Dark-cyan);
+    border-color: var(--Very-ligh-gray);
+    color: var(--Very-ligh-gray);
+}
+
+.right>button:hover{
+    background-color: var(--Very-dark-cyan);
+    border-color: var(--Very-ligh-gray);
+    color: var(--Very-ligh-gray);
+}
+
+/* responsive zone */
+@media only screen and (max-width:940px){
+    .card {
+        width: 400px;
+        flex-direction: column;
+        height: fit-content;
+        top: 5rem;
+    }
+}
